@@ -1,0 +1,153 @@
+/** @format */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  /* ### Primary */
+  --Red: hsl(0, 100%, 74%);
+  --Green: hsl(154, 59%, 51%);
+
+  /* ### Accent */
+  --Blue: hsl(248, 32%, 49%);
+
+  /* ### Neutral */
+  --Dark-Blue: hsl(249, 10%, 26%);
+  --Grayish-Blue: hsl(246, 25%, 77%);
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+main {
+  width: auto;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background: url(./images/bg-intro-desktop.png), var(--Red);
+  padding: 2rem 7rem;
+  grid-column-gap: 4rem;
+  justify-content: center;
+  align-items: center;
+  font-family: poppins;
+}
+.col_1 {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.col_1 h1 {
+  width: 90%;
+  font-size: 2.5rem;
+}
+.col_1 p {
+  font-size: 16px;
+}
+.col_2 .top {
+  background-color: var(--Blue);
+  color: white;
+  padding: 0.5rem 0;
+  margin-bottom: 1rem;
+  text-align: center;
+  border-radius: 0.5rem;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+input {
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  outline: none;
+  border: 1px solid var(--Grayish-Blue);
+  cursor: grabbing;
+}
+input:focus {
+  border: 1px solid var(--Dark-Blue);
+}
+.err {
+  display: none;
+  color: var(--Red);
+  margin-top: -1rem;
+  align-self: flex-end;
+}
+
+button {
+  background-color: var(--Green);
+  color: white;
+  padding: 1rem 0;
+  text-align: center;
+  outline: none;
+  border: none;
+  /* box-shadow: 5px 5px 5px 0px var(--Dark-Blue); */
+  border-radius: 0.5rem;
+  transition: opacity 0.2s ease-in-out;
+  cursor: pointer;
+}
+button:hover {
+  opacity: 0.8;
+}
+.endText {
+  color: var(--Grayish-Blue);
+}
+.endText a {
+  text-decoration: none;
+  color: var(--Red);
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.error {
+  border: 1px solid red;
+}
+@media screen and (max-width: 900px) {
+  main {
+    width: auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: url(./images/bg-intro-mobile.png), var(--Red);
+    padding: 2rem;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: scroll;
+  }
+  .col_1 {
+    text-align: center;
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .col_1 h1 {
+    font-size: 2rem;
+  }
+  .col_2 {
+    width: 100%;
+  }
+  .col_2 .top {
+    padding: 1rem 0;
+  }
+  input {
+    padding: 1rem;
+  }
+  .endText {
+    /* align-self: center; */
+    font-size: 14px;
+    text-align: center;
+    color: var(--Grayish-Blue);
+  }
+}
